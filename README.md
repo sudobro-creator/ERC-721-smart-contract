@@ -164,12 +164,13 @@ This guide details how to mint an ERC-721 token using Hardhat and the OpenZeppel
      ```
      npx hardhat run scripts/mint.js --network swisstronik
      ```
-5. Push Code to Github
-
-   ```
-   git add .
-   git commit -m "First Commit"
-   git push -u origin main
-   ```
+5. Update your repository
+   - Push Code to Github
+     
+     ```
+     git add .
+     git commit -m "First Commit"
+     git push -u origin main
+     ```
 
 
