@@ -3,12 +3,12 @@ const hre = require("hardhat");
 const { SwisstronikPlugin } = require("@swisstronik/web3-plugin-swisstronik");
 hre.web3.registerPlugin(new SwisstronikPlugin(hre.network.config.url));
 async function main() {
-    const replace_contractAddress = "0x1c70aF87ee3d6207bdBe2aAA468b3735c8E265C4";
+    const replace_contractAddress = "<<Replace_Contract_Address>>";
     const [from] = await hre.web3.eth.getAccounts();
     const contractFactory = await hre.ethers.getContractFactory("FreeNFT");
     const ABI = JSON.parse(contractFactory.interface.formatJson());
     const contract = new hre.web3.eth.Contract(ABI, replace_contractAddress);
-    const replace_functionArgs = "0x1c70aF87ee3d6207bdBe2aAA468b3735c8E265C4"; // Recipient address
+    const replace_functionArgs = "<<Replace_Wallet_Address"; // Recipient address
     console.log("Minting 1 token...");
     try {
         const transaction = await contract.methods.safeMint(replace_functionArgs).send({ from });
